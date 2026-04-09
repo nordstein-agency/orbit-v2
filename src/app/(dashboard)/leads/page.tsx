@@ -18,7 +18,6 @@ export default async function LeadsPage() {
     .is('deleted_at', null)
     .order('created_at', { ascending: false });
 
-  const { data: profiles } = await supabase.from('profiles').select('id, full_name, email').eq('is_active', true);
-
+  const { data: profiles } = await supabase.from('profiles').select('id, full_name, email, role').eq('is_active', true);
   return <LeadsClient initialLeads={leads || []} currentProfile={profile} allProfiles={profiles || []} />;
 }

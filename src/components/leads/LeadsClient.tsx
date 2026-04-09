@@ -11,7 +11,7 @@ import NoteModal from '@/components/modals/NoteModal';
 interface Props {
   initialLeads: Lead[];
   currentProfile: Profile | null;
-  allProfiles: Pick<Profile, 'id' | 'full_name' | 'email'>[];
+  allProfiles: Pick<Profile, 'id' | 'full_name' | 'email' | 'role'>[];
 }
 
 export default function LeadsClient({ initialLeads, currentProfile, allProfiles }: Props) {
